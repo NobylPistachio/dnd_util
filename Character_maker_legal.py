@@ -248,7 +248,7 @@ def get_languages(race,subrace) -> set:
         raise Exception("The race language is already inside current languages")
     return languages
 
-def name(race,sex,subrace):
+def organizing_name_dict(race,sex,subrace):
     match race:
 
         # case "":
@@ -399,9 +399,10 @@ def name(race,sex,subrace):
             print(f"{race} {subrace} {sex}")
             print(f"{type(race)} {type(subrace)} {type(sex)}")
             raise Exception("Unable to match Race")
+        
+        
     
-    return firstName,lastName
-
+    
 def c_class(auto):
     from DnD_Data import CLASSES
     CLASSES_LIST = [CLASS for CLASS in CLASSES.keys()]

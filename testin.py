@@ -1,9 +1,8 @@
 import random
 
-from Character_maker_legal import get_race
+from Character_maker_legal import name
 
-asdf = {"a":6,"b":64,"c":48}
+from DnD_Data import RACES
+race = list(RACES.keys())
+sex = ["Male","Female"]
 
-gg = asdf.get("b",69) if False else 420
-
-print(gg)
