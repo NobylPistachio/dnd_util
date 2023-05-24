@@ -49,7 +49,21 @@ RACES = {
     }
 
 LANGUAGES = {
-    "RACE_LANGUAGES":[
+    "RACE_LANGUAGES":{
+        "Aarakocra": "Aarakocra",
+        "Dragonborn": "Draconic",
+        "Dwarf": "Dwarvish",
+        "Elf": "Elvish",
+        "Genasi": "Primordial",
+        "Gnome": "Gnomish",
+        "Goliath": "Giant",
+        "Half-Elf": "Elvish",
+        "Half-Orc": "Orcish",
+        "Halfling": "Halfling",
+        "Human": None, # Language of their choosing
+        "Tiefling": "Infernal",
+        },
+    "FULL_LIST":[
         "Aarakocra",
         "Draconic",
         "Dwarvish",
@@ -62,62 +76,205 @@ LANGUAGES = {
         "Auran",
         "Infernal",
         "Primordial"
-        ]
+        ],
     }
+
+HEIGHT_WEIGHT = {
+    "Aarakocra": {
+        "base_height": 50,
+        "base_weight": 80,
+        "height_mod": (2, 4),
+        "weight_mod": (2, 10)
+    },
+    "Dragonborn": {
+        "base_height": 50,
+        "base_weight": 80,
+        "height_mod": (2, 10),
+        "weight_mod": (2, 6)
+    },
+    "Dwarf": {
+        "Mountain Dwarf": {
+            "base_height": 48,
+            "base_weight": 115,
+            "height_mod": (2, 4),
+            "weight_mod": (2, 6)
+        },
+        "Hill Dwarf": {
+            "base_height": 44,
+            "base_weight": 115,
+            "height_mod": (2, 4),
+            "weight_mod": (2, 6)
+        }
+    },
+    "Elf": {
+        "Dark Elf": {
+            "base_height": 44,
+            "base_weight": 75,
+            "height_mod": (2, 6),
+            "weight_mod": (2, 6)
+        },
+        "Ground Elf": {
+            "base_height": 60,
+            "base_weight": 100,
+            "height_mod": (2, 4),
+            "weight_mod": (2, 4)
+        },
+        "High Elf": {
+            "base_height": 90,
+            "base_weight": 100,
+            "height_mod": (2, 10),
+            "weight_mod": (2, 4)
+        },
+        "Wood Elf": {
+            "base_height": 90,
+            "base_weight": 100,
+            "height_mod": (2, 10),
+            "weight_mod": (2, 4)
+        }
+    },
+    "Genasi": {
+        "base_height": 56,
+        "base_weight": 110,
+        "height_mod": (2, 10),
+        "weight_mod": (2, 4)
+    },
+    "Gnome": {
+        "base_height": 31,
+        "base_weight": 35,
+        "height_mod": (2, 4),
+        "weight_mod": 1
+    },
+    "Goliath": {
+        "base_height": 84,
+        "base_weight": 140,
+        "height_mod": (2, 6),
+        "weight_mod": (2, 4)
+    },
+    "Half-Elf": {
+        "base_height": 57,
+        "base_weight": 110,
+        "height_mod": (2, 8),
+        "weight_mod": (2, 4)
+    },
+    "Halfling": {
+        "base_height": 28,
+        "base_weight": 35,
+        "height_mod": (2, 6),
+        "weight_mod": 1
+    },
+    "Half-Orc": {
+        "base_height": 58,
+        "base_weight": 140,
+        "height_mod": (2, 10),
+        "weight_mod": (2, 6)
+    },
+    "Human": {
+        "base_height": 56,
+        "base_weight": 110,
+        "height_mod": (2, 10),
+        "weight_mod": (2, 4)
+    },
+    "Tiefling": {
+        "base_height": 57,
+        "base_weight": 110,
+        "height_mod": (2, 8),
+        "weight_mod": (2, 4)
+    }
+}
+
 
 NAMES = {
     "Aarakocra":{
-        "LastNames":[
-            "Air","Airborn","Airman","Breeze","Cloud","Current","Cyclone",
-            "DeAera","DeAerag","DeAerk","DeAerka","DeAial",
-            "DeAialro","DeAldug","DeAldugek","DeAur","DeAurin",
-            "DeDeekek","DeDeelek","DeErrk","DeErrok","DeHeehk",
-            "DeHelehk","DeIkki","DeIkkit","DeIleak","DeIlek",
-            "DeKilco","DeKilcop","DeKleeck","DeKloock","DeLagin",
-            "DeLugin", "DeOerett", "DeOorr", "DeOusl", "DeOust",
-            "DeQuaf","DeQuet", "DeQuierk" ,"DeQuilet", "DeQuizik",
-            "DeQuko", "DeRani", "DeRenzu", "DeSalleek", "DeSazel",
-            "DeSejlik", "DeSileg", "DeUnok","DeUrreek", "DeZeed",
-            "DeZelid", "DeZelip", "DeZiko", "DeZygic", "DeZylex",
-            "Flow", "Fly",
-            "Gale","Galeborn", "Galeman", "Glide", "Gust",
-            "Lift",
-            "Sky", "Skybirch", "Skyborn", "Skybranch", "Skyelm",
-            "Skyfield","Skygarden","Skygrove","Skylily","Skymaple",
-            "Skymeadow", "Skyoak", "Skyorchid", "Skypine", "Skyrose",
-            "Skyspurce", "Skywood", "Soar", "Storm", "Sunbirch",
-            "Sunborn", "Sunbranch", "Sunelm", "Sunfield", "Sunling",
-            "Sungarden","Windgarden","Sungrove","Windgrove","Whirlwind",
-            "Wind", "Windborn", "Windman", "Windson", "Zephyr"
-            ],
-        "FirstNames":{
-            "Male":[
-                "Aera", "Aerag", "Aerk", "Aerka", "Aial",
-                "Aialro", "Aldug", "Aldugek", "Aur", "Aurin",
-                "Deekek", "Deelek", "Errk", "Errok", "Heehk",
-                "Helehk", "Ikki", "Ikkit", "Ileak", "Ilek",
-                "Kilco", "Kilcop", "Kleeck", "Kloock", "Lagin",
-                "Lugin", "Oerett", "Oorr", "Ousl", "Oust",
-                "Quaf", "Quet", "Quierk", "Quilet", "Quizik",
-                "Quko", "Rani", "Renzu", "Salleek", "Sazel",
-                "Sejlik", "Sileg", "Unok", "Urreek", "Zeed",
-                "Zelid", "Zelip", "Ziko", "Zygic", "Zylex"
-                ],
-            "Female":[
-                "Aera", "Aerag", "Aerk", "Aerka", "Aial",
-                "Aialro", "Aldug", "Aldugek", "Aur", "Aurin",
-                "Deekek", "Deelek", "Errk", "Errok", "Heehk",
-                "Helehk", "Ikki", "Ikkit", "Ileak", "Ilek",
-                "Kilco", "Kilcop", "Kleeck", "Kloock", "Lagin",
-                "Lugin", "Oerett", "Oorr", "Ousl", "Oust",
-                "Quaf", "Quet", "Quierk", "Quilet", "Quizik",
-                "Quko", "Rani", "Renzu", "Salleek","Sazel",
-                "Sejlik", "Sileg", "Unok", "Urreek", "Zeed",
-                "Zelid", "Zelip", "Ziko", "Zygic", "Zylex"
-                ]
-            }
-        }
-    }
+        "last_names":["Air", "Airborn", "Airman", "Breeze", "Cloud", "Current", "Cyclone", "DeAera", "DeAerag", "DeAerk","DeAerka", "DeAial", "DeAialro", "DeAldug", "DeAldugek", "DeAur", "DeAurin", "DeDeekek", "DeDeelek", "DeErrk","DeErrok", "DeHeehk", "DeHelehk", "DeIkki", "DeIkkit", "DeIleak", "DeIlek", "DeKilco", "DeKilcop", "DeKleeck","DeKloock", "DeLagin", "DeLugin", "DeOerett", "DeOorr", "DeOusl", "DeOust", "DeQuaf","DeQuet", "DeQuierk" ,"DeQuilet", "DeQuizik", "DeQuko", "DeRani", "DeRenzu", "DeSalleek", "DeSazel", "DeSejlik", "DeSileg", "DeUnok","DeUrreek", "DeZeed", "DeZelid", "DeZelip", "DeZiko", "DeZygic", "DeZylex", "Flow", "Fly", "Gale","Galeborn", "Galeman", "Glide", "Gust", "Lift", "Sky", "Skybirch", "Skyborn", "Skybranch", "Skyelm","Skyfield", "Skygarden", "Skygrove", "Skylily", "Skymaple", "Skymeadow", "Skyoak", "Skyorchid", "Skypine", "Skyrose","Skyspurce", "Skywood", "Soar", "Storm", "Sunbirch", "Sunborn", "Sunbranch", "Sunelm", "Sunfield", "Sunling","Sungarden", "Windgarden", "Sungrove", "Windgrove", "Whirlwind", "Wind", "Windborn", "Windman", "Windson", "Zephyr"],
+        "first_names":{
+            "Male":["Aera", "Aerag", "Aerk", "Aerka", "Aial", "Aialro", "Aldug", "Aldugek", "Aur", "Aurin","Deekek", "Deelek", "Errk", "Errok", "Heehk", "Helehk", "Ikki", "Ikkit", "Ileak", "Ilek", "Kilco", "Kilcop", "Kleeck", "Kloock", "Lagin", "Lugin", "Oerett", "Oorr", "Ousl", "Oust", "Quaf", "Quet", "Quierk", "Quilet", "Quizik", "Quko", "Rani", "Renzu", "Salleek", "Sazel", "Sejlik", "Sileg", "Unok", "Urreek", "Zeed", "Zelid", "Zelip", "Ziko", "Zygic", "Zylex"],
+            "Female":["Aera", "Aerag", "Aerk", "Aerka", "Aial", "Aialro", "Aldug", "Aldugek", "Aur", "Aurin", "Deekek", "Deelek", "Errk", "Errok", "Heehk", "Helehk", "Ikki", "Ikkit", "Ileak", "Ilek", "Kilco", "Kilcop", "Kleeck", "Kloock", "Lagin", "Lugin", "Oerett", "Oorr", "Ousl", "Oust", "Quaf", "Quet", "Quierk", "Quilet", "Quizik", "Quko", "Rani", "Renzu", "Salleek","Sazel", "Sejlik", "Sileg", "Unok", "Urreek", "Zeed", "Zelid", "Zelip", "Ziko", "Zygic", "Zylex"],
+        },
+    },
+    "Dragonborn":{
+        "last_names":["Achebe", "Ademola", "Adeoye", "Adesida", "Adesina", "Adeyemi", "Aguda", "Akenzua", "Akerele", "Akiloye", "Akinjide", "Akintola", "Akinyemi", "Akpabio", "Akunyili", "Alakija", "Alamieyeseigha", "Amaechi", "Anenih", "Anikulapokuti", "Asaridokubo", "Attah", "Awolowo", "Ayim", "Azikiwe", "Babangida", "Balewa", "Balogun", "Bamgboshe", "Bankole", "Bello", "Biobaku", "Boro", "Buhari", "Chukwumereije", "Danjuma", "Dimka", "Diya", "Effiong", "Egwu", "Ekwensi", "Eze", "Ezekwesili", "Fagbure", "Falana", "Gbadamosi", "Gowon", "Ibori", "Igbinedion", "Igwe", "Ironsi", "Iweala", "Iwu", "Jaja", "Jakande", "Jang", "Jomogbomo", "Kalejaiye", "Kalu", "Madaki", "Magoro", "Mbadinuju", "Mbanefo", "Ngige", "Nnamani", "Nzeogwu", "Obasanjo", "Obi", "Odili", "Ohakim", "Ojukwu", "Okadigbo", "Okafor", "Okar", "Okeke", "Okereke", "Okilo", "Okiro", "Okonjo", "Okonkwo", "Okorie", "Okotieboh", "Okoye", "Okpara", "Olanrewaju", "Omehia", "Onobanjo", "Onwuatuegwu", "Onwudiwe", "Onyejekwe", "Orji", "Oyenusi", "Oyinlola", "Sarowiwa", "Sekibo", "Solarin", "Soyinka", "Tinibu", "Uba", "Yaradua"],
+        "first_names":{
+            "Male":["Abdoul", "Abdkarim", "Abdoulaye", "Aboubacar", "Adama", "Ahmed", "Ali", "Alou", "Baba", "Bakary", "Bouba", "Boubacar", "Boureima", "Celestin", "Cheick", "Dango", "Daniel", "Daouda", "Djeïdy", "Djibril", "Drissa", "Felicien", "Fode", "Ibrahim", "Ibrahima", "Issa", "Jacob", "Karim", "Khadafi", "Konaté", "Lassine", "Louis", "Mahamadou", "Mamadou", "Moctar", "Modibo", "Mohamed", "Moussa", "Naly", "Oumar", "Ousmane", "Salif", "Seydou", "Siaka", "Souleymane", "Soumaila", "Yahirou", "Yaya", "Youba", "Youssouf"],
+            "Female":["Abibatou", "Agna", "Aicha", "Aiicha", "Aissata", "Anita", "Armande", "Assitan", "Binette", "Bintou", "Chloe", "Christiane", "Deni", "Diahara", "Diarra", "Djello", "Djeneba", "Djenebou", "Djilla", "Estou", "Fanta ", "Fatim", "Fatou", "Kanouta", "Germaine", "Haoua", "Hawa", "Hawam", "Jeanne", "Kadidia", "Kady", "Korotoumou ", "Lea", "Leila", "Mariam", "Mary", "Mathi", "Meryam", "Micheline", "Mounaissa", "Nene", "Oumou", "Oumouba", "Oumouk", "Pauline", "Rama", "Soumba", "Stephanie", "Tall", "Zahra"],
+        },
+    },
+    "Dwarf":{
+        "last_names":["Amber", "Amethyst", "Anvil", "Blacksmith", "Boulder", "Boulderbreak", "Boulderman", "Boulderson", "Clay", "Cliff", "Coal", "Coalman", "Coalson", "Cobalt", "Cobblestone", "Copper", "Copper", "Darkrock", "Darkstone", "Deeprock" , "Deepstone", "Diamond", "Dirt", "Dune", "Earth", "Earthrock", "Earthstone", "Emerald", "Forge", "Forgeman" , "Forgeson", "Gold", "Goldforge", "Goldhammer", "Goldsmith", "Gravel", "Ground", "Hammer", "Hammerman", "Hammerson" , "Highrock", "Highstone", "Hill", "Hillson", "Hillrock", "Hillstone", "Ingot",  "Iron", "Ironforge", "Ironhammer" , "Ironsmith", "Ironson", "Jade", "Lead", "Marble", "Marblebreak", "Marbleson", "Mesa", "Metal", "Mineral" , "Mineshaft", "Mossrock", "Mosstone", "Mountain", "Mountainrock", "Moutainstone", "Mythril", "Nickel", "Onyx", "Opal", "Ore", "Orichalcum", "Pebble", "Quartz", "Quarry", "Rock", "Rockbreak", "Rockhammer", "Rockman", "Rockson" , "Salt", "Sand", "Sapphire", "Silver", "Silverforge", "Silversmith", "Smith", "Smithson", "Soil", "Steelsmith", "Stone", "Stonebreak", "Stoneman", "Stonesmith", "Stoneson", "Tin", "Topaz", "Tunnel", "Tunnelsmith", "Zicron"],
+        "first_names":{
+            "Male":["Aaron", "Alexander", "Anton", "Ben", "David", "Elias", "Emil", "Erik", "Fabian", "Felix", "Fynn", "Hannes", "Henry", "Jakob", "Jan", "Jannis", "Jonah", "Jonas", "Jonathan", "Julian", "Karl", "Leo", "Leonard", "Levi", "Liam", "Linus", "Luca", "Luis", "Lukas", "Mads", "Matteo", "Max", "Maximilian", "Mika", "Milan", "Moritz", "Niklas", "Noah", "Oskar", "Paul", "Philipp", "Raphael", "Samuel", "Simon", "Theo","Tim", "Tom", "Vincent", "Yannic", "Leon"],
+            "Female":["Alina", "Amelie", "Anna", "Charlotte", "Clara", "Elena", "Elisa", "Ella", "Emilia", "Emily", "Emma", "Frieda", "Greta", "Hannah", "Helena", "Ida", "Isabella", "Johanna", "Julia", "Lara" , "Laura", "Lea", "Lena", "Leni", "Leonie", "Lia", "Lilly",  "Lina", "Lisa", "Lotta", "Luisa", "Maja", "Maria", "Marie", "Marlene", "Mathilda", "Melina", "Mia", "Mila", "Mira", "Nele", "Nora", "Paula", "Pauline", "Pia", "Sarah", "Sofia", "Sophie", "Viktoria", "Yuna" ],
+        },
+    },
+    "Elf":{
+        "last_names":["Brightbranch", "Brightform", "Brightgarden", "Brightgroove", "Brightmeadow", "Feybirch", "Feyborn", "Feybranch", "Feyelm", "Feyfield", "Feyform", "Feygarden", "Feygrove", "Feylily", "Feyling", "Feyman", "Feymaple", "Feymeadow", "Feyoak", "Feyorchid", "Feypine", "Feyrose", "Feyson", "Feyspurce", "Feywood", "Goldbirch", "Goldbranch", "Goldelm", "Goldfield", "Goldgrove", "Goldlily", "Goldmaple", "Goldoak", "Goldorchid", "Goldpine", "Goldrose", "Goldspurce", "Goldwood", "Silverbirch", "Silverbranch", "Silverelm", "Silverfield", "Silvergarden", "Silvergrove", "Silverlily", "Silvermaple", "Silvermeadow", "Silveroak", "Silverorchid", "Silverpine", "Silverrose", "Silverspurce", "Silverwood", "Skybirch", "Skybranch", "Skyelm", "Skyfield", "Skygarden", "Skygrove", "Skylily", "Skymaple", "Skymeadow", "Skyoak", "Skyorchid", "Skypine", "Skyrose", "Skyspurce", "Skywood", "Starbirch", "Starborn", "Starelm", "Starform", "Stargarden", "Starlily", "Starling", "Starman", "Starmaple", "Starmeadow", "Staroak", "Starorchid", "Starpine", "Starrose", "Starson", "Starspurce", "Starwood", "Sunbirch", "Sunbranch", "Sunelm", "Sunfield", "Sungarden", "Sungrove", "Sunlily", "Sunmaple", "Sunmeadow", "Sunoak", "Sunorchid", "Sunpine", "Sunrose", "Sunspurce", "Sunwood"],
+        "first_names":{
+            "Male":["Francesco", "Alessandro", "Lorenzo", "Andrea", "Leonardo", "Mattia", "Matteo", "Gabriele", "Riccardo", "Tommaso" , "Davide", "Giuseppe", "Antonio", "Federico", "Edoardo", "Marco", "Samuele", "Diego", "Giovanni", "Luca", "Christian", "Pietro", "Simone", "Nicolo", "Filippo", "Alessio", "Gabriel", "Michele", "Emanuele", "Jacopo", "Daniele", "Cristian", "Giacomo", "Vincenzo", "Salvatore", "Manuel", "Gioele", "Thomas", "Stefano", "Giulio", "Samuel", "Nicola", "Giorgio", "Luigi", "Daniel", "Elia", "Angelo", "Domenico", "Paolo", "Raffaele"],
+            "Female":["Sofia", "Giulia", "Aurora", "Giorgia", "Martina", "Emma", "Greta", "Chiara", "Sara", "Alice" , "Gaia", "Anna", "Francesca", "Ginevra", "Noemi", "Alessia", "Matilde", "Vittoria", "Viola", "Beatrice", "Nicole", "Giada", "Elisa", "Rebecca", "Elena", "Arianna", "Mia", "Camilla", "Ludovica", "Maria", "Marta", "Melissa", "Bianca", "Gioia", "Asia", "Adele", "Eleonora", "Miriam", "Serena", "Benedetta", "Irene", "Angelica", "Ilaria", "Carlotta", "Caterina", "Margherita", "Alessandra", "Valentina", "Emily", "Laura"],
+        },
+
+    },
+    "Genasi":{
+        "last_names":{
+            "Air Genasi":["Air", "Airborn", "Airman", "Breeze", "Cloud", "Current", "Cyclone", "Flow", "Fly", "Gale", "Galeborn", "Galeman", "Glide", "Gust", "Lift", "Sky", "Skyborn", "Soar", "Storm", "Whirlwind", "Wind", "Windborn", "Windman", "Windson", "Zephyr"],
+            "Earth Genasi":["Amethyst", "Boulder", "Clay", "Coal", "Cobblestone", "Darkboulder", "Darkrock", "Darkstone", "Deeprock", "Deepstone", "Diamond", "Dune", "Earth", "Emerald", "Gravel", "Ground", "Jade", "Mossrock", "Mosstone", "Mountain", "Mountainrock", "Moutainstone", "Opal", "Sapphire", "Stone"],
+            "Fire Genasi":["Flame", "Fire", "Burn", "Furnace", "Ember", "Heat", "Inferno", "Blaze", "Pyre", "Glow", "Sear", "Spark", "Hearth", "Sun", "Lava", "Volcano", "Flare", "Ignite", "Kindle", "Torch", "Light", "Lamp", "Lantern", "Flameborn", "Fireson"],
+            "Water Genasi":["Water", "Ocean", "Sea", "Lake", "Creek", "River", "Stream", "Deepwater", "Rain", "Iceman", "Iceberg", "Tide", "Wave", "Gulf", "Geyser", "Rapid", "Bay", "Brook", "Canal", "Channel", "Cove", "Cape", "Delta", "Estuary", "Harbor"],
+        },
+        "first_names":{
+            "Male":["An", "AnDung", "Bao", "Bay", "Buu", "Ca", "Chien", "Cong", "Cuong", "Danh", "Duc", "Ha", "Hien", "Hieu", "Hieú", "Hoang", "Hung", "Huu", "Huy", "Huynh", "Kim", "Lap", "Le", "Long", "Minh", "Nam", "Nghi", "Nghia", "Ngu", "Nguyen", "Nien", "Phuoc", "Quan", "Quy", "Tai", "Tam", "Teo", "Teo", "Thien", "Tin", "Toan", "Trai", "Trang", "Trong", "Trung", "Truuc", "Tuan", "Van", "Vien", "Viet"],
+            "Female":["Am", "Anh", "Be", "Bian", "Ca", "Cai", "Cam", "Chau", "Cuc", "Ha", "Hai", "Hanh", "Hao", "Hoa", "Hòng", "Huong", "Hwa", "Hyunh", "KimCuc", "Kimly", "Lang", "Le", "Lien", "Linh", "Mai", "My", "Ngoc", "Ngocbich", "Ngon", "Nguyen", "Nguyet", "Nhung", "Nu", "Phoung", "Phuong", "Sang", "Tai", "Thanh", "Thao", "Thi", "Thu", "Thuy", "Trang", "Truc", "Tu", "Tuyen", "Tuyet", "Ut", "Xuan", "Yen"],
+        },
+    },
+    "Gnome":{
+        "last_names":["Archer", "Bader", "Bailer", "Bailey", "Baker", "Bannister", "Barber", "Bard", "Barker", "Baxter", "Becker", "Boatman", "Boatwright", "Brewer", "Builder", "Carpenter", "Carter", "Cartwright", "Chaffer", "Chandler", "Chaplin", "Clark", "Cleric", "Cobbler", "Collier", "Cook", "Cookie", "Cooper", "Courier", "Craft", "Decker", "Dempster", "Draper", "Driver", "Dyer", "Farmer", "Fisher", "Fletcher", "Forester", "Foster", "Fowler", "Fuller", "Gage", "Gardener", "Garner", "Glover", "Guard", "Hayward", "Healer", "Hunt", "Hunter", "Judge", "Judge", "Kelner", "Key", "Knight", "Lawman", "Lawson", "Mage", "Mason", "Mayer", "Mercer", "Miller", "Painter", "Palmer", "Parker", "Piper", "Plummer", "Porter", "Potter", "Reeve", "Rhyder", "Sawyer", "Scribe", "Sealer", "Sexton", "Sheppard", "Shipwright", "Slater", "Slaughter", "Smith", "Stringer", "Tamer", "Thatcher", "Tinker", "Todd", "Toller", "Trainer", "Tuner", "Turner", "Wainwright", "Waker", "Walker", "Waller", "Warf", "Webb", "Woodman", "Wright", "Writer", "Zaiger"],
+        "first_names":{
+            "Male":["Adam",  "Alexander",  "Allen",  "Anderson",  "Bailey",  "Baker",  "Barnes",  "Bell",  "Bennett",  "Brooks", "Aguilar", "Alonso", "Alvarez", "Andres", "Arias", "Blanco", "Bravo", "Caballero", "Cabrera", "Calvo", "Campos", "Cano", "Carmona", "Carrasco", "Castillo", "Castro", "Cortes", "Crespo", "Cruz", "Delgado", "Ibanez", "Iglesias", "Izquierdo", "Jimenez", "Leon", "Lopez", "Lorenzo", "Lozano", "Marcos", "Marin", "Rodriguez", "Roman", "Romero", "Rubio", "Ruiz", "Saez", "Sanchez", "Santos"],
+            "Female":["Abril", "Adriana", "Agustina", "Alejandra", "Amanda", "Ana Sofia", "Andrea", "Antonella", "Antonia", "Ariana", "Bianca", "Camila", "Carolina", "Catalina", "Daniela", "Elena", "Emilia", "Emily", "Emma", "Florencia", "Gabriela", "Guadalupe", "Isabella", "Ivanna", "Juana", "Julieta", "Lucia", "Luciana", "Maite", "Manuela", "María", "Fernanda", "Estefani", "Mariana", "Martina", "Mía", "Natalia", "Nicole", "Paula", "Rafaela", "Regina", "Renata", "Samantha", "Sanz", "Sara", "Serrano", "Sofia", "Soler", "Soto", "Suarez"],
+        },
+    },
+    "Goliath":{
+        "last_names":["Aimeilagian", "Aimeilakanu", "Aimeilakiv", "Aimeilathai", "Aimeilathi", "Aimeiliaga", "Aimeiliana", "Aimeiliano", "Aimeillago", "Aimeilolavi", "Anakalagian", "Anakalakanu", "Anakalakiv", "Anakalathai", "Anakalathi", "Anakaliaga", "Anakaliana", "Anakaliano", "Anakallago", "Anakalolavi", "Elaniagian", "Elaniakanu", "Elaniakiv", "Elaniathai", "Elaniathi", "Elaniiaga", "Elaniiana", "Elaniiano", "Elanilago", "Elaniolavi", "Gathakagian", "Gathakakanu", "Gathakakiv", "Gathakathai", "Gathakathi", "Gathakiaga","Gathakiana", "Gathakiano", "Gathaklaga", "Gathakolavi", "Kalagagian", "Kalagakanu", "Kalagakiv", "Kalagathai", "Kalagathi", "Kalagiaga", "Kalagiana", "Kalagiano", "Kalaglaga", "Kalagolavi", "Lithmoragian", "Lithmorakanu", "Lithmorakiv", "Lithmorathai", "Lithmorathi", "Lithmoriaga", "Lithmoriana", "Lithmoriano", "Lithmorlaga", "Lithmorolavi", "Mithagagian", "Mithagakanu", "Mithagakiv", "Mithagathai", "Mithagathi", "Mithagiaga", "Mithagiana", "Mithagiano", "Mithaglaga", "Mithagolavi", "Ogolakagian", "Ogolakakanu", "Ogolakakiv", "Ogolakathai", "Ogolakathi", "Ogolakiaga", "Ogolakiana", "Ogolakiano", "Ogolaklaga", "Ogolakolavi", "Thulagian", "Thulakanu", "Thulakiv", "Thulathai", "Thulathi", "Thuliaga", "Thuliana", "Thuliano", "Thullaga", "Thulolavi", "Zekatuagian", "Zekatuakanu", "Zekatuakiv", "Zekatuathai", "Zekatuathi", "Zekatuiaga", "Zekatuiana", "Zekatuiano", "Zekatulaga", "Zekatuolavi"],
+        "first_names":{
+            "Male":["Aukan", "Aukned", "Belzed", "Bienzo", "Bogdo", "Cenhen", "Delvu", "Dirgag", "Dondid", "Eglath", "Egned", "Fengi", "Fondin", "Fopgun", "Fuldo", "Gaeal", "Ganden", "Gauthak", "Hogfin", "Ilikan", "Jondid", "Keothi", "Kuori", "Lokag", "Lukeg", "Magned", "Manneo", "Maveith", "Nalla", "Orilo", "Orvin", "Paavu", "Padin", "Pethani", "Qubig", "Sarzin", "Shonben", "Shontai", "Thalai", "Thotham", "Uthal", "Vamto", "Vaunea", "Venko", "Ventik", "Vimak", "Wagfor", "Waldu", "Zaxfor", "Zendu"],
+            "Female":["Aukan", "Aukned", "Belzed", "Bienzo", "Bogdo", "Cenhen", "Delvu", "Dirgag", "Dondid", "Eglath", "Egned", "Fengi", "Fondin", "Fopgun", "Fuldo", "Gaeal", "Ganden", "Gauthak", "Hogfin", "Ilikan", "Jondid", "Keothi", "Kuori", "Lokag", "Lukeg", "Magned", "Manneo", "Maveith", "Nalla", "Orilo", "Orvin", "Paavu", "Padin", "Pethani", "Qubig", "Sarzin", "Shonben", "Shontai", "Thalai", "Thotham", "Uthal", "Vamto", "Vaunea", "Venko", "Ventik", "Vimak", "Wagfor", "Waldu", "Zaxfor", "Zendu"],
+        },
+    },
+    "Half-Elf":{
+        "last_names":["Skyoak", "Skyrose", "Skybirch", "Skyspurce", "Skypine", "Skyelm", "Skymaple", "Skywood", "Skyorchid","Skylily", "Skygrove", "Skybranch", "Skyfield", "Skymeadow", "Skygarden", "Staroak", "Starrose", "Starbirch","Starspurce", "Starpine", "Starelm", "Starmaple", "Starwood", "Starorchid", "Starlily", "Starmeadow", "Stargarden", "Sungrove","Sunbranch", "Sunfield", "Sunoak", "Sunrose", "Sunbirch", "Sunspurce", "Sunpine", "Sunelm", "Sunmaple", "Sunwood", "Sunorchid","Sunlily", "Sungrove", "Sunbranch", "Sunfield", "Sunmeadow", "Sungarden", "Goldoak", "Goldrose", "Goldbirch","Goldspurce", "Goldpine", "Goldelm", "Goldmaple", "Goldwood", "Goldorchid", "Goldlily", "Goldgrove", "Goldbranch", "Goldfield","Sunmeadow", "Sungarden", "Silveroak", "Silverrose", "Silverbirch", "Silverspurce", "Silverpine", "Silverelm", "Silvermaple","Silverwood", "Silverorchid", "Silverlily", "Silvergrove", "Silverbranch", "Silverfield", "Silvermeadow", "Silvergarden", "Feyoak", "Feyrose","Feybirch", "Feyspurce", "Feypine", "Feyelm", "Feymaple", "Feywood", "Feyorchid", "Feylily", "Feygrove", "Feybranch", "Feyfield", "Feymeadow","Feygarden", "Starborn", "Starman", "Starson", "Starling", "Starform", "Feyborn", "Feyman", "Feyson", "Feyling","Feyform"],
+        "first_names":{
+            "Male":["George", "Nick", "John", "Kostas", "Stelios", "Alex", "Chris", "Thanos", "konstantinos", "Jim" , "Dimitris", "Christos", "Angelo", "Marios", "Apostolis", "Aris", "Panagiotis", "Manos", "Bill", "Peter", "Giannis", "Alexandros", "Lefteris", "Giorgos", "Andrew", "Alexander", "Steven", "Evangelos", "Billy", "Manolis", "Nicolas", "Gregory", "Pantelis", "Spiros", "Aggelos", "Antonis", "Sotiris", "Con", "Petros", "Constantine", "Alkinoos", "Achilleas", "Vasilhs", "Agim", "Stavros", "Christopher", "Vassilis", "Panos", "Vaggelis", "Michael"],
+            "Female":["Maria", "Katerina", "Anna", "Anastasia", "Christina", "Georgia", "Mary", "Helen", "Dimitra", "Elena", "Irene", "Konstantina", "Alexandra", "Eva", "Marianna", "Sofia", "Eleni", "Christine", "Zoe", "Joanna", "Theodora", "Angela", "Katherine", "Danae", "Catherine", "Nicole", "Olga", "Myrto", "Vasiliki", "Eleftheria", "Kate", "Efi", "Artemis", "Evi", "Fotini", "Agnes", "Loanna", "Nefeli", "Chrysa", "Marina", "Melina", "Sophia", "Stella", "Athina", "Despina", "Rafaela", "Dora", "Giota", "Alice", "Lydia"],
+        },
+    },
+    "Half-Orc":{
+        "last_names":["Emilson",  "Mathiasson",  "Magnusson",  "Jonasson",  "Williamson",  "Oliverson",  "Noahson",  "Adrianson",  "Tobiasson",  "Eliasson", "Danielson",  "Henrikson",  "Sebastianson",  "Lucasson",  "Martinson",  "Andreasson",  "Benjaminson",  "Leonson",  "Sanderson",  "Alexanderson", "Liamson",  "Isakson",  "Jakobson",  "Kristianson",  "Akselson",  "Julianson",  "Fredrikson",  "Sondreson",  "Johannesson",  "Erikson", "Jonathanson",  "Mariusson",  "Filipson",  "Lukasson",  "Sigurdson",  "Markusson",  "Hakonson",  "Eirikson",  "Theoson",  "Oscarson", "Mikkelson",  "Theodorson",  "Davidson",  "Gabrielson",  "Oskarson",  "Kasperson",  "Marcusson",  "Olavson",  "Evenson",  "Hermanson", "Aaronson ",  "Aidenson",  "Alexanderson",  "Andrewson",  "Anthonyson",   "Benjaminson",   "Calebson",   "Carterson",   "Charlesson",   "Christopherson", "Danielson",   "Davidson",   "Dylanson",   "Elijahson",   "Ethanson",  "Gabrielson",   "McGrayson",   "Henryson",   "Isaacson",   "Isaiahson", "Jackson",  "McJackson",   "Jacobson",   "Jamesson",   "McJaxon",   "Jaydenson",   "Johnson",   "Josephson",   "Joshuason",   "Julianson", "Levison",   "Liamson",   "Lincolnson",   "Loganson",   "Lucasson",   "Lukeson",   "McMason",   "Mateoson",   "Matthewson",   "Michaelson", "Nathanson",  "Noahson",   "Oliverson",   "Owenson",   "Ryanson",   "Samuelson",   "Sebastianson",   "Thomasson",   "Williamson",   "Wyattson"],
+        "first_names":{
+            "Male":["Emil",  "Mathias",  "Magnus",  "Jonas",  "William",  "Oliver",  "Noah",  "Adrian",  "Tobias",  "Elias", "Daniel",  "Henrik",  "Sebastian",  "Lucas",  "Martin",  "Andreas",  "Benjamin",  "Leon",  "Sander",  "Alexander", "Liam",  "Isak",  "Jakob",  "Kristian",  "Aksel",  "Julian",  "Fredrik",  "Sondre",  "Johannes",  "Erik", "Jonathan",  "Marius",  "Filip",  "Lukas",  "Sigurd",  "Markus",  "Hakon",  "Eirik",  "Theo",  "Oscar", "Mikkel",  "Theodor",  "David",  "Gabriel",  "Oskar",  "Kasper",  "Marcus",  "Olav",  "Even",  "Herman"],
+            "Female":["Emma",  "Nora",  "Sofie",  "Thea",  "Ingrid",  "Emilie",  "Mia",  "Julie",  "Anna",  "Ida", "Linnea",  "Amalie",  "Maria",  "Sara",  "Ella",  "Maja",  "Leah",  "Tuva",  "Sofia",  "Frida", "Vilde",  "Mathilde",  "Marie",  "Olivia",  "Jenny",  "Hanna",  "Aurora",  "Elise",  "Malin",  "Victoria", "Oda",  "Selma",  "Hedda",  "Julia",  "Mari",  "Eline",  "Martine",  "Mina",  "Alma",  "Andrea", "Pernille",  "Amanda",  "Mathea",  "Celine",  "Tiril",  "Isabella",  "Sarah",  "Mille",  "Synne",  "Hannah"],
+        },
+    },
+    "Halfling":{
+        "last_names":["Aftor", "Alnig", "Argurra", "Barren", "Bregold", "Clearfarm", "Curun", "DeAlnig", "DeCurun", "DeEast", "Deepcoal", "Deepwood", "DeGalle", "DeHibran", "DeNorth", "DePanip", "DeRudra", "DeShore", "DeSkenin", "DeSouth", "DeWest", "DeWillow", "Dwarfgate", "Dwarfland", "Eastbrook", "Eastsea", "Eastshore",  "Eastson", "Elfgate", "Elfland" , "Elfport", "Elvcove", "Everdeep", "Farborn", "Farill", "Farsea", "Farson", "Fincoed", "Firstland", "Forest", "Forestedge", "Galle", "Ghenpoe", "Giantland", "Gnomeland", "Goldshore", "Goldtrust", "Greathill", "Gypte", "Hanan", "Hibran", "Hilltop", "Huland", "Impance", "Irongate", "Ishro", "Moruk", "Mountain", "Movet", "Nickletown" , "Northbrook", "Northsea", "Oakgrove", "Orcland", "Panip", "Pronson", "Ravenshore", "Redcreek", "Rosemeadow", "Rudra" , "Salan", "Seaborn", "Season", "Shipman", "Silvercrown", "Silverwood", "Skenin", "Soland", "Southbrook", "Southsea", "Southson", "Stangate","Stanland", "Steelburg", "Tiefland", "Traveller", "Westbrook", "Westdale", "Westsea", "Westshore", "Westson", "Wheatland", "Willowsbrook", "Wintergate", "Wood", "Woodedge", "Woodland", "Xena", "Yulin", "Zincton"],
+        "first_names":{
+            "Male":["George", "Nick", "John", "Kostas", "Stelios", "Alex", "Chris", "Thanos", "konstantinos", "Jim" , "Dimitris", "Christos", "Angelo", "Marios", "Apostolis", "Aris", "Panagiotis", "Manos", "Bill", "Peter", "Giannis", "Alexandros", "Lefteris", "Giorgos", "Andrew", "Alexander", "Steven", "Evangelos", "Billy", "Manolis", "Nicolas", "Gregory", "Pantelis", "Spiros", "Aggelos", "Antonis", "Sotiris", "Con", "Petros", "Constantine", "Alkinoos", "Achilleas", "Vasilhs", "Agim", "Stavros", "Christopher", "Vassilis", "Panos", "Vaggelis", "Michael"],
+            "Female":["Maria", "Katerina", "Anna", "Anastasia", "Christina", "Georgia", "Mary", "Helen", "Dimitra", "Elena", "Irene", "Konstantina", "Alexandra", "Eva", "Marianna", "Sofia", "Eleni", "Christine", "Zoe", "Joanna", "Theodora", "Angela", "Katherine", "Danae", "Catherine", "Nicole", "Olga", "Myrto", "Vasiliki", "Eleftheria", "Kate", "Efi", "Artemis", "Evi", "Fotini", "Agnes", "Loanna", "Nefeli", "Chrysa", "Marina", "Melina", "Sophia", "Stella", "Athina", "Despina", "Rafaela", "Dora", "Giota", "Alice", "Lydia"],
+        },
+    },
+    "Human":{
+        "last_names":["Adams",  "Alexander",  "Allen",  "Anderson",  "Bailey",  "Baker",  "Barnes",  "Bell",  "Bennett",  "Brooks", "Brown",  "Bryant",   "Butler",  "Campbell",  "Carter",  "Clark", "Coleman",  "Collins" , "Cook",  "Cooper" , "Cox", "Davis",  "Diaz",  "Edwards",  "Evans",  "Flores",  "Foster",  "Garcia",  "Gonzales",  "Gonzalez", "Gray",  "Green",  "Griffin",   "Hall",  "Harris",  "Hayes","Henderson",  "Hernandez",  "Hill",  "Howard" , "Hughes",  "Jackson",  "James",  "Jenkins",  "Johnson",  "Jones",  "Kelly",  "King",  "Lee",  "Lewis" , "Long",  "Lopez",  "Martin",  "Martinez",  "Miller",  "Mitchell",  "Moore",  "Morgan",  "Morris",  "Murphy" , "Nelson",  "Parker",  "Patterson",  "Perez",  "Perry",  "Peterson",  "Phillips",  "Powell",  "Price",  "Ramirez", "Reed",  "Richardson",  "Rivera",  "Roberts", "Robinson",  "Rodriguez",  "Rogers", "Ross", "Russell", "Sanchez", "Sanders",  "Scott",  "Simmons",  "Smith",  "Stewart",  "Taylor",  "Thomas",  "Thompson",  "Torres",  "Turner", "Walker",  "Ward",  "Washington",  "Watson",  "White",  "Williams",  "Wilson",  "Wood",  "Wright",  "Young"],
+        "first_names":{
+            "Male":["Aaron", "Aiden", "Alexander", "Andrew", "Anthony", "Benjamin", "Caleb", "Carter", "Charles", "Christopher", "Daniel", "David", "Dylan", "Elijah", "Ethan", "Gabriel", "Grayson", "Henry", "Isaac", "Isaiah", "Jack", "Jackson", "Jacob", "James", "Jaxon", "Jayden", "John", "Joseph", "Joshua", "Julian", "Levi", "Liam", "Lincoln", "Logan", "Lucas", "Luke", "Mason", "Mateo", "Matthew", "Michael", "Nathan", "Noah", "Oliver", "Owen", "Ryan", "Samuel", "Sebastian", "Thomas", "William", "Wyatt"],
+            "Female":["Abigail", "Addison", "Amelia", "Aria", "Aubrey", "Audrey", "Ava", "Avery", "Bedegraine", "Bella" , "Brooklyn", "Camila", "Charlotte", "Chloe", "Claire", "Eleanor", "Elizabeth", "Ella", "Ellie", "Emily", "Evelyn", "Grace", "Hannah", "Harper", "Hazel", "Isabella", "Layla", "Leah", "Lillian", "Lily", "Luna", "Madison", "Mia", "Mila", "Natalie", "Nora", "Olivia", "Paisley", "Penelope", "Riley", "Savannah", "Scarlett", "Skylar", "Sofia", "Sophia", "Stella", "Victoria", "Violet", "Zoe", "Zoey" ],
+        },
+    },
+    "Tiefling":{
+        "last_names":["Abadi", "Abboud", "Almasi", "Amari", "Antar", "Antoun", "Arian", "Asfour", "Asghar", "Asker", "Aswad", "Aswad", "Atiyeh", "Attia", "Awad", "Ba", "Baba", "Bahar", "Bahar", "Basara", "Baz", "Bishara", "Bitar", "Botros", "Boulos", "Boutros", "Cham", "Dagher", "Daher", "Deeb", "Essa", "Fakhoury", "Ganem", "Ganim", "Gerges", "Ghannam", "Guirguis", "Hadad", "Haddad", "Haik", "Hajjar", "Hakimi", "Halabi", "Hanania", "Handal", "Harb", "Isa", "Issa", "Kalb", "Kanaan", "Kassab", "Kassis", "Kattan","Khouri", "Khoury", "Kouri", "Koury", "Maalouf", "Maloof", "Malouf", "Maroun", "Masih", "Mifsud", "Mikhail", "Moghadam", "Morcos", "Nader", "Nahas", "Naifeh", "Najjar", "Naser", "Nassar", "Nazari", "Quraishi", "Qureshi", "Rahal", "Rahal", "Sabbag", "Sabbagh", "Safar", "Said", "Salib", "Saliba", "Samaha", "Sarraf", "Sayegh", "Seif", "Shadid", "Shalhoub", "Shammas", "Shamon", "Shamoon", "Shammas", "Shamon", "Shamoon", "Shamoun", "Sleiman", "Tahan", "Tannous", "Toma"],
+        "first_names":{
+            "Male":["Abad", "Ahirm", "Akmen", "Amnon", "Andram", "Astar", "Balam", "Barakas", "Bathin", "Caim", "Chem", "Cimer", "Cressel", "Damakos", "Ekemon", "Euron", "Fenriez", "Forcas", "Habor", "Iados", "Kairon", "Leucis", "Mamnen", "Mantus", "Marbas", "Melech", "Merihim", "Modean", "Mordai", "Mormo", "Morthos", "Nicor", "Nirgel", "Oriax", "Painmon", "Pelaios", "Purson", "Qemuel", "Raam", "Rimmon", "Thamuz", "Therai","Sammal", "Skamos", "Tethren", "Valifar", "Vassago", "Xappan", "Xepar", "Zephan"],
+            "Female":["Akta", "Anakis", "Armara", "Astaro", "Aym", "Azza", "Beleth", "Bryseis", "Bune", "Criella", "Damaia", "Decarabia", "Ea", "Gadreek", "Gomory", "Hecat", "Ishte", "Jezebeth", "Kali", "Kalista", "Kasdeya", "Lerssa", "Lilith", "Makaria", "Manea", "Markosian", "Mastema", "Naamah", "Nemja", "Nija", "Orianna", "Osah", "Phelaia", "Prosperine", "Purah", "Pyra", "Rieta", "Ronobe", "Ronwe", "Seddit", "Seere", "Sekhmet", "Semyaza", "Shava", "Shax", "Sorath", "Uzza", "Vapula", "Vepar", "Verin"],
+        },
+    },
+}
 
 CLASSES = {
     "Artificer":[
